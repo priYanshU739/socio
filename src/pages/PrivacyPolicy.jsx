@@ -153,8 +153,7 @@ export default function PrivacyPolicy () {
           <p>
             We implement reasonable administrative and technical safeguards to
             protect user data from unauthorized access, alteration, disclosure,
-            or destruction. However, no internet-based system can be guaranteed
-            to be completely secure.
+            or destruction. 
           </p>
         </section>
 
