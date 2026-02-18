@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import DashNavbar from "../components/DashNavBar";
+import DashNavbar from "../components/DashNavbar.jsx";
  import { useAuth } from "../auth/AuthContext";
  import axios from "axios";
 // Instagram‑style profile page (Tailwind only)
