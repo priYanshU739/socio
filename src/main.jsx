@@ -13,7 +13,7 @@ import { AuthProvider } from "./auth/AuthContext.jsx";
 import Profile from "./pages/Profile.jsx";
 import Questions from "./pages/Questions.jsx";
 import VRRoom from "./pages/VrRoom.jsx";
-
+import PrivacyPolicy  from "./pages/PrivacyPolicy.jsx"
 const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -37,6 +37,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               {/* optional: also support /home -> Home */}
               <Route path="home" element={<Home />} />
               <Route path="vrroom" element={<VRRoom />} />
+              <Route path="privacypolicy" element={<PrivacyPolicy/>} />
             </Route>
           </Routes>
         </AuthProvider>

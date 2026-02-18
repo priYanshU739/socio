@@ -403,7 +403,9 @@ export default function Home() {
             <button className="transition hover:text-white hover:underline focus:outline-none cursor-pointer">
               Terms
             </button>
-            <button className="transition hover:text-white hover:underline focus:outline-none cursor-pointer">
+            <button 
+             onClick={() => navigate("/privacypolicy")}
+             className="transition hover:text-white hover:underline focus:outline-none cursor-pointer">
               Privacy
             </button>
             <button
