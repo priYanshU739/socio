@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from "../../public/media/logo.png";
 
 export default function HomeNavbar({ links = [], shadow = false }) {
   const [open, setOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function HomeNavbar({ links = [], shadow = false }) {
   // Normalize target: treat "FAQ" or "/faq" as "#faq"
   const normalizeTarget = (link) => {
     const to = typeof link === "string" ? link : link?.to || "";
-    const label = typeof link === "string" ? "" : (link?.label || "");
+    const label = typeof link === "string" ? "" : link?.label || "";
     const isFAQ =
       label.toLowerCase().includes("faq") || to.toLowerCase() === "/faq";
     if (isFAQ) return "#faq";
@@ -82,10 +83,12 @@ export default function HomeNavbar({ links = [], shadow = false }) {
           className="flex items-center gap-2 font-extrabold tracking-wide cursor-pointer"
           aria-label="Go to top"
         >
-          <span className="h-7 w-7 rounded-lg bg-indigo-400 shadow-[0_0_20px_rgba(34,211,238,.5)]" />
+          <span className="h-20 w-14 ">
+            <img src={logo} alt="Logo" className="w-50 h-auto" />
+          </span>
           <div className="flex">
             <span className="text-2xl text-white">Socio</span>
-          {/* <span className="text-2xl block bg-linear-to-r from-yellow-500  via-red-500 to-purple-600 
+            {/* <span className="text-2xl block bg-linear-to-r from-yellow-500  via-red-500 to-purple-600 
                bg-clip-text text-transparent"
             >VR</span> */}
           </div>

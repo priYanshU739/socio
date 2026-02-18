@@ -5,7 +5,7 @@
 import { useEffect, useRef, useState } from "react";
 import HomeNavbar from "../components/HomeNavbar";
 import { useNavigate } from "react-router-dom";
-
+import logo from "../../public/media/logo.png";
 export default function Home() {
   // simple parallax for the showcase bg image & sticky shadow toggle
   const [shadow, setShadow] = useState(false);
@@ -384,12 +384,17 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6 text-center sm:text-left">
           {/* Left - Branding */}
           <div>
+            <div className="flex w- 60 ">
+              <span className="h-10 w-7 ">
+              <img src={logo} alt="Logo" className="w-10 h-auto" />
+            </span>
             <h3 className="text-2xl  font-bold text-white tracking-wide">
               Socio
               {/* <span className="bg-linear-to-r from-yellow-400 font-bold via-red-500 to-purple-500 bg-clip-text text-transparent">
                 VR
               </span> */}
             </h3>
+            </div>
             <p className="text-sm text-slate-400">
               Next Dimension of Social Connection
             </p>
@@ -403,9 +408,10 @@ export default function Home() {
             <button className="transition hover:text-white hover:underline focus:outline-none cursor-pointer">
               Terms
             </button>
-            <button 
-             onClick={() => navigate("/privacypolicy")}
-             className="transition hover:text-white hover:underline focus:outline-none cursor-pointer">
+            <button
+              onClick={() => navigate("/privacypolicy")}
+              className="transition hover:text-white hover:underline focus:outline-none cursor-pointer"
+            >
               Privacy
             </button>
             <button
