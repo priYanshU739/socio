@@ -193,12 +193,14 @@
 
 import { useAuth } from "../auth/AuthContext";
 import { useEffect, useRef, useState } from "react";
+import api, { getApiBase } from "../lib/api";
 
 export default function VRRoom() {
   const { user, loading } = useAuth();
   const iframeRef = useRef(null);
   const [streamUrl, setStreamUrl] = useState(null);
   const [error, setError] = useState(null);
+  const [streamUnavailable, setStreamUnavailable] = useState(false);
   const sessionStartedRef = useRef(false);
 
   // 🚀 Start Unreal session
@@ -215,29 +217,21 @@ export default function VRRoom() {
       }
 
       try {
-        const res = await fetch("http://localhost:4000/api/session/start", {
-          method: "POST",
-          credentials: "include", // ✅ send auth cookie
-          headers: { "Content-Type": "application/json" },
-        });
+        const { data } = await api.post("/api/session/start");
 
-        if (!res.ok) {
-          throw new Error(`Failed to start session: ${res.statusText}`);
-        }
-
-        const data = await res.json();
-        
         if (isMounted) {
           sessionStartedRef.current = true;
-          // The streamUrl already includes userEmail as a query parameter
-          // The player.html will automatically read it and send to Unreal Engine
-          setStreamUrl(data.streamUrl);
+          if (data.stub || !data.streamUrl) {
+            setStreamUnavailable(true);
+          } else {
+            setStreamUrl(data.streamUrl);
+          }
           console.log("[VRRoom] Session started:", data);
         }
       } catch (err) {
         console.error("[VRRoom] Error starting session:", err);
         if (isMounted) {
-          setError(err.message || "Failed to start session");
+          setError(err.response?.data?.error || err.message || "Failed to start session");
         }
       }
     }
@@ -249,10 +243,8 @@ export default function VRRoom() {
     const handleBeforeUnload = () => {
       if (sessionStartedRef.current) {
         // Use sendBeacon for reliable cleanup on page unload
-        navigator.sendBeacon(
-          "http://localhost:4000/api/session/stop",
-          JSON.stringify({})
-        );
+        const stopUrl = `${getApiBase() || ""}/api/session/stop`;
+        navigator.sendBeacon(stopUrl, JSON.stringify({}));
       }
     };
 
@@ -295,6 +287,20 @@ export default function VRRoom() {
           >
             Retry
           </button>
+        </div>
+      </div>
+    );
+  }
+
+  // VR / Pixel Streaming not available (e.g. serverless deployment)
+  if (streamUnavailable) {
+    return (
+      <div className="min-h-screen grid place-items-center text-slate-400">
+        <div className="text-center max-w-md px-4">
+          <p className="text-lg mb-2">VR session unavailable</p>
+          <p className="text-sm">
+            Pixel Streaming (VR room) is only available when the backend runs locally with Unreal Engine and Wilbur. This deployment is API-only for auth and preferences.
+          </p>
         </div>
       </div>
     );

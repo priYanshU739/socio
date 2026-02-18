@@ -211,10 +211,10 @@ export default function Home() {
             <p className="max-w-md text-slate-400 mb-6">
               Watch this cinematic experience and step into{" "}
               <span className="text-gray-300 font-bold gap-0 ">
-                Socia{" "}
-                <span className=" bg-linear-to-r from-yellow-500  via-red-500 to-purple-600  bg-clip-text text-transparent">
+                Socio{" "}
+                {/* <span className=" bg-linear-to-r from-yellow-500  via-red-500 to-purple-600  bg-clip-text text-transparent">
                   VR
-                </span>
+                </span> */}
               </span>
               — a space where you don’t just see virtual worlds, you live them,
               connect with others, and create your own moments
@@ -235,7 +235,7 @@ export default function Home() {
           </div> */}
           <div className="w-full lg:w-1/2 flex justify-center">
             <iframe
-              src="https://www.youtube.com/embed/6P4AF8eP-Yg?autoplay=1&mute=1&loop=1&playlist=6P4AF8eP-Yg"
+              // src="https://www.youtube.com/embed/6P4AF8eP-Yg?autoplay=1&mute=1&loop=1&playlist=6P4AF8eP-Yg"
               title="YouTube video player"
               allow="autoplay; encrypted-media"
               allowFullScreen

@@ -1,5 +1,5 @@
 import { useAuth } from "../auth/AuthContext";
-import DashNavbar from "../components/DashNavBar";
+import DashNavbar from "../components/DashNavbar.jsx";
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
