@@ -12,24 +12,41 @@ import { useAuth } from "../auth/AuthContext";
 //     ]}
 //   />
 
-
-export default function PrivacyPolicy () {
+export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-gray-300 px-6 py-16">
       <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
 
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Privacy Policy
-        </h1>
-
-        <p className="text-sm text-gray-400 mb-10">
+        <p className="text-sm text-gray-400 mb-8">
           Effective Date: February 2026 <br />
           Platform: Konnex <br />
-          Website: https://konnex.in <br />
-          {/* Contact: support@konnex.in */}
+          Website: https://konnex.in
         </p>
 
-        {/* Section 1 */}
+        {/* Data Controller Info */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-white mb-4">
+            Data Controller Information
+          </h2>
+          <p>
+            Konnex is a preincubated startup at{" "}
+            <span className="text-white font-medium">Nirmaan IIT Madras</span>.
+          </p>
+          <p className="mt-2">
+            Sudha Shankar Innovation Hub, IIT Madras <br />
+            Chennai, Tamil Nadu – 600036 <br />
+            India
+          </p>
+          
+          <p className="mt-4">
+            For privacy or data protection inquiries, contact: 
+          </p> 
+          <p className="mt-2 text-white font-medium">contact.konnexteam@gmail.com</p>
+          <p className="mt-2 text-white font-medium">9263704199, 8955091204</p>
+        </section>
+
+        {/* Introduction */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
             1. Introduction
@@ -38,11 +55,11 @@ export default function PrivacyPolicy () {
             Konnex is a virtual reality social media platform that allows users
             to create 3D avatars, join virtual rooms, and interact with other
             users in real time. This Privacy Policy explains how we collect,
-            use, store, and protect your information when you use our platform.
+            use, store, protect, and retain your personal information.
           </p>
         </section>
 
-        {/* Section 2 */}
+        {/* Information We Collect */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
             2. Information We Collect
@@ -52,11 +69,9 @@ export default function PrivacyPolicy () {
             A. Information You Provide
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li>Email address for registration and communication.</li>
+            <li>Email address for account registration and communication.</li>
             <li>Username displayed publicly within virtual rooms.</li>
-            <li>
-              User image (selfie) uploaded to generate your 3D avatar.
-            </li>
+            <li>Selfie image uploaded to generate your 3D avatar.</li>
           </ul>
 
           <h3 className="text-lg font-medium text-white mt-6 mb-2">
@@ -70,68 +85,61 @@ export default function PrivacyPolicy () {
           </ul>
         </section>
 
-        {/* Section 3 */}
+        {/* How We Collect Data */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
             3. How We Collect Data
           </h2>
           <p>
-            We collect information through account registration forms, user
-            uploads (such as selfie images), authentication processes, and
-            automated system logs generated during platform usage.
+            We collect data through account registration forms, user uploads,
+            authentication processes, and automated system logs generated during
+            platform usage.
           </p>
         </section>
 
-        {/* Section 4 */}
+        {/* How We Use Data */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
             4. How We Use Your Information
           </h2>
           <ul className="list-disc list-inside space-y-2">
-            <li>Create and manage your user account.</li>
-            <li>Generate and display your 3D avatar.</li>
+            <li>Create and manage user accounts.</li>
+            <li>Generate and display 3D avatars.</li>
             <li>Enable real-time virtual room interactions.</li>
             <li>Provide voice communication features.</li>
-            <li>Maintain security and prevent fraud.</li>
+            <li>Maintain platform security and prevent fraud.</li>
             <li>Improve platform functionality and performance.</li>
-            <li>Respond to support inquiries.</li>
+            <li>Respond to user inquiries and support requests.</li>
           </ul>
           <p className="mt-4">
-            We do not sell your personal data or use it for advertising
-            purposes.
+            We do not sell personal data and do not use it for advertising.
           </p>
         </section>
 
-        {/* Section 5 */}
+        {/* Data Sharing */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
             5. How We Share Your Information
           </h2>
-          <p>
-            We do not sell, rent, or trade your personal information to third
-            parties.
-          </p>
-          <p className="mt-4">
-            Your data may only be shared:
-          </p>
-          <ul className="list-disc list-inside space-y-2 mt-2">
+          <p>We do not sell, rent, or trade personal information.</p>
+          <ul className="list-disc list-inside space-y-2 mt-4">
             <li>
-              With Epic Online Services (EOS) for authentication and online
-              functionality.
+              Shared with Epic Online Services (EOS) for authentication and
+              online functionality.
             </li>
             <li>If required by law or legal process.</li>
             <li>
-              To protect the safety, rights, or security of the platform or its
+              To protect the rights, safety, or security of the platform and
               users.
             </li>
           </ul>
           <p className="mt-4">
-            Usernames and 3D avatars are visible to other users inside virtual
+            Usernames and 3D avatars are visible to other users within virtual
             rooms as part of core platform functionality.
           </p>
         </section>
 
-        {/* Section 6 */}
+        {/* Data Retention */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
             6. Data Retention
@@ -139,59 +147,60 @@ export default function PrivacyPolicy () {
           <p>
             We retain personal information for as long as your account remains
             active or as necessary to provide services. If you request account
-            deletion, your personal data will be permanently removed from our
-            active systems within a reasonable timeframe unless required by
-            law to retain it.
+            deletion, your data will be removed from active systems within a
+            reasonable timeframe unless retention is required by law.
           </p>
         </section>
 
-        {/* Section 7 */}
+        {/* Data Security */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
             7. Data Security
           </h2>
           <p>
-            We implement reasonable administrative and technical safeguards to
-            protect user data from unauthorized access, alteration, disclosure,
-            or destruction. 
+            We implement reasonable administrative, technical, and
+            organizational safeguards to protect personal data from unauthorized
+            access, alteration, disclosure, or destruction.
           </p>
         </section>
 
-        {/* Section 8 */}
-        {/* <section className="mb-10">
+        {/* Privacy Rights */}
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
-            8. User Rights
+            8. Your Privacy Rights
           </h2>
           <p>
             You may request access, correction, or deletion of your personal
-            data by contacting us at:
+            data. To submit a privacy or data protection request, contact:
           </p>
-          <p className="mt-2 text-white">support@konnex.in</p>
-        </section> */}
+          <p className="mt-3 text-white font-medium">privacy@konnex.in</p>
+          <p className="mt-2">
+            We respond to verified requests within approximately 2 - 3 days.
+          </p>
+        </section>
 
-        {/* Section 9 */}
+        {/* Children's Privacy */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-white mb-4">
-            8. Children's Privacy
+            9. Children's Privacy
           </h2>
           <p>
-            Konnex is not intended for children under 13 years of age. We do
-            not knowingly collect personal information from children under 13.
+            Konnex is not intended for children under 13 years of age. We do not
+            knowingly collect personal information from children under 13.
           </p>
         </section>
 
-        {/* Section 10 */}
+        {/* Policy Updates */}
         <section>
           <h2 className="text-2xl font-semibold text-white mb-4">
-            9 . Changes to This Policy
+            10. Changes to This Policy
           </h2>
           <p>
-            We may update this Privacy Policy from time to time. Any changes
-            will be posted on this page with an updated effective date.
+            We may update this Privacy Policy from time to time. Updates will be
+            posted on this page with a revised effective date.
           </p>
         </section>
-
       </div>
     </div>
   );
-};
+}

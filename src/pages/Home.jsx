@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import HomeNavbar from "../components/HomeNavbar";
 import { useNavigate } from "react-router-dom";
 import logo from "../../public/media/logo.png";
+
 export default function Home() {
   // simple parallax for the showcase bg image & sticky shadow toggle
   const [shadow, setShadow] = useState(false);
@@ -187,39 +188,36 @@ export default function Home() {
       </section>
 
       {/* SHOWCASE / PARALLAX */}
-      <section
+      {/* <section
         id="trailer"
         className="relative overflow-hidden min-h-[30vh] sm:min-h-[40vh] bg-[#07070b] flex items-center justify-center"
-      >
+      > */}
         {/* background image */}
-        <div
+        {/* <div
           ref={parallaxRef}
           className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1606943137305-0614673d846f?q=80&w=1600&auto=format&fit=crop')] 
                bg-cover bg-center opacity-25 will-change-transform"
-        />
+        /> */}
 
         {/* content container */}
-        <div
+        {/* <div
           className="relative flex flex-col lg:flex-row items-center justify-between 
                   max-w-7xl w-full mx-auto px-6 py-20 gap-10"
-        >
-          {/* LEFT: Text content */}
-          <div className="lg:w-[40%] text-center lg:text-left">
+        > */}
+          
+          {/* <div className="lg:w-[40%] text-center lg:text-left">
             <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-white">
               Cinematic Showcase
             </h2>
             <p className="max-w-md text-slate-400 mb-6">
               Watch this cinematic experience and step into{" "}
               <span className="text-gray-300 font-bold gap-0 ">
-                Socio{" "}
-                {/* <span className=" bg-linear-to-r from-yellow-500  via-red-500 to-purple-600  bg-clip-text text-transparent">
-                  VR
-                </span> */}
+                Konnex
               </span>
               — a space where you don’t just see virtual worlds, you live them,
               connect with others, and create your own moments
             </p>
-          </div>
+          </div> */}
 
           {/* RIGHT: Video */}
           {/* <div className="lg:w-[60%] flex justify-center">
@@ -233,7 +231,7 @@ export default function Home() {
                    w-[95%] sm:w-[90%] md:w-[85%] lg:w-[90%] xl:w-[85%] aspect-video"
             />
           </div> */}
-          <div className="w-full lg:w-1/2 flex justify-center">
+          {/* <div className="w-full lg:w-1/2 flex justify-center">
             <iframe
               // src="https://www.youtube.com/embed/6P4AF8eP-Yg?autoplay=1&mute=1&loop=1&playlist=6P4AF8eP-Yg"
               title="YouTube video player"
@@ -243,9 +241,9 @@ export default function Home() {
                w-[95%] sm:w-[90%] md:w-[85%] lg:w-[95%] xl:w-[90%] 
                aspect-video min-h-[220px] sm:min-h-[300px] md:min-h-[380px]"
             ></iframe>
-          </div>
-        </div>
-      </section>
+          </div> */}
+        {/* </div> */}
+      {/* </section> */}
 
       {/* HOW IT WORKS */}
       <section id="howto" className="py-20">
@@ -298,24 +296,27 @@ export default function Home() {
       {/* REWARDS / GALLERY */}
       <section id="rewards" className="pt-0 pb-20">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold">Avatars & Emotes</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold">MetaHuman Avatars</h2>
+
           <p className="text-slate-400 mt-2">
-            Explore different realistic avatars and expressive emotes that bring
-            your virtual personality to life.
+            Explore different photo-realistic avatars and expressive emotes that
+            bring your virtual personality to life. (*Open source Images taken
+            from Metahuman.)
           </p>
-          <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3 ">
+
+          <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
             {[
-              "https://images.unsplash.com/photo-1520975922322-54b0d24a0a44?q=80&w=1600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop",
-              "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1600&auto=format&fit=crop",
+              "/media/MetaHuman_1.png",
+              "/media/MetaHuman_2.png",
+              "/media/MetaHuman_3.png",
+              "/media/MetaHuman_4.png",
+              "/media/MetaHuman_5.png",
+              "/media/MetaHuman_6.png",
             ].map((src, i) => (
               <img
                 key={i}
                 src={src}
-                alt="reward"
+                alt={`MetaHuman ${i + 1}`}
                 loading="lazy"
                 className="h-56 w-full object-cover rounded-xl border border-white/10 transition-transform duration-500 ease-in-out hover:scale-105"
               />
@@ -365,15 +366,22 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold">Jump In</h2>
           <p className="text-slate-400 mt-2">
-            Embed your Pixel Streaming player below by replacing the iframe src
-            with your signalling server URL.
+            {/* Embed your Pixel Streaming player below by replacing the iframe src
+            with your signalling server URL. */}
+            This is the demo of one of our evnironment. 
           </p>
           <div className="mt-4 rounded-2xl overflow-hidden border border-white/10 bg-black">
-            <iframe
+            {/* <iframe
               title="Socio Stream"
               src="https://your-signalling-server.example.com/"
               allow="autoplay; microphone; clipboard-read; clipboard-write"
               className="w-full h-[65vh] border-0"
+            /> */}
+            <img
+              src="/media/virtualRoom_1.png"
+              alt="Virtual Room Preview"
+              loading="lazy"
+              className="h-full w-full object-cover rounded-xl border border-white/10 transition-transform duration-500 ease-in-out hover:scale-105"
             />
           </div>
         </div>
@@ -384,22 +392,52 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6 text-center sm:text-left">
           {/* Left - Branding */}
           <div>
-            <div className="flex w- 60 ">
+            <div className="flex">
               <span className="h-10 w-7 ">
-              <img src={logo} alt="Logo" className="w-10 h-auto" />
-            </span>
-            <h3 className="text-2xl  font-bold text-white tracking-wide">
-              Socio
-              {/* <span className="bg-linear-to-r from-yellow-400 font-bold via-red-500 to-purple-500 bg-clip-text text-transparent">
+                <img src={logo} alt="Logo" className="w-10 h-auto" />
+              </span>
+              <h3 className="text-2xl  font-bold text-white tracking-wide">
+                Konnex
+                {/* <span className="bg-linear-to-r from-yellow-400 font-bold via-red-500 to-purple-500 bg-clip-text text-transparent">
                 VR
               </span> */}
-            </h3>
+              </h3>
+            </div>
+            <div className="flex w- 60 ">
+              <div>
+                {/* Company Info */}
+                <div>
+                  <p className="text-sm leading-relaxed">
+                    Address:
+                    <br />
+                    Sudha Shankar Innovation Hub, IIT Madras
+                    <br />
+                    Chennai, Tamil Nadu – 600036
+                  </p>
+                </div>
+
+                {/* Contact Info */}
+                <div>
+                  <h3 className="text-white font-semibold mb-3">Contact</h3>
+
+                  <p className="text-sm mb-2">
+                    Email:{" "}
+                    <a
+                      href="mailto:contact_team@profitonn.com"
+                      className="text-blue-400 hover:underline"
+                    >
+                      contact.konnexteam@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
             <p className="text-sm text-slate-400">
               Next Dimension of Social Connection
             </p>
+
             <p className="text-xs mt-2 text-slate-400">
-              © {new Date().getFullYear()} Socio. All rights reserved.
+              © {new Date().getFullYear()} Konnex. All rights reserved.
             </p>
           </div>
 

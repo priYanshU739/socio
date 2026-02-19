@@ -87,7 +87,7 @@ export default function HomeNavbar({ links = [], shadow = false }) {
             <img src={logo} alt="Logo" className="w-50 h-auto" />
           </span>
           <div className="flex">
-            <span className="text-2xl text-white">Socio</span>
+            <span className="text-2xl text-white">Konnex</span>
             {/* <span className="text-2xl block bg-linear-to-r from-yellow-500  via-red-500 to-purple-600 
                bg-clip-text text-transparent"
             >VR</span> */}
